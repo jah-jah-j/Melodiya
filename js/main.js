@@ -12,11 +12,17 @@ let currentFloor = 2,
 		countValue = +counter.textContent,
 		disabled = true;
 
-//Функции
-nextFloor();
-prevFloor();
-showFloor();
-disableDownBtn();
+//Функция инициализации
+
+
+document.addEventListener('DOMContentLoaded', function (e){
+	nextFloor();
+	prevFloor();
+	showFloor();
+	disableDownBtn();
+})
+
+
 
 //Функция наведения
 
