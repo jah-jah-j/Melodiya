@@ -14,6 +14,7 @@
 }
 
 body{
+    position: relative;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -135,4 +136,197 @@ body{
 .button-down:disabled, .button-up:disabled{
     cursor: default;
     opacity: 0.5;
+}
+
+
+.footer{
+    padding: 50px 0;
+    background-color: #D7D7D7;
+    color: #635854;
+}
+
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-right{
+    max-width: 430px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo-link{
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 37px;
+}
+
+.footer-contact{
+    margin-right: 59px;
+}
+
+.footer-text{
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.footer-number{
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+}
+.footer-number:hover{
+    color: #3596F5;
+}
+
+.footer-socials{
+    display: flex;
+    justify-content: space-between;
+    width: 125px;
+}
+
+.social-link{
+    display: block;
+    text-decoration: none;
+}
+
+.social-icon path{
+    fill: #635854;
+}
+
+.social-link:hover .social-icon path{
+    fill: #3596F5;
+}
+
+.footer-nav{
+    flex-grow: 0.1;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.nav-link{
+    color: inherit;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.nav-link:hover{
+    color: #3596F5;
+}
+
+.popup-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.popup{
+    background-color: #fff;
+    position: absolute;
+    z-index: 100;
+    width: 70%;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+}
+
+.close{
+    top: 38px;
+    right: 27px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.popup-block{
+    display: flex;
+}
+
+.popup-apartments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 6;
+    background-color: #EBEBEB;
+    padding: 50px 0 57px;
+}
+
+.apartment-floor, .apartment-title{
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.apartment-image path{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.apartment-image path:hover{
+    opacity: 1;
+}
+
+.apartment-choose{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 50px 127px 57px 46px;
+}
+
+.apartment-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #3596F5;
+}
+
+.apartment-link{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+}
+
+.apartment-link:visited{
+    color: inherit;
+}
+
+.apartment-description{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #635854;
+}
+
+.hidden{
+    display: none;
 }

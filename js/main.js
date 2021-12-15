@@ -5,6 +5,8 @@ const floorPath = document.querySelector('.home-image');
 const	counterUp = document.querySelector('.button-up');
 const	counterDown = document.querySelector('.button-down');
 const counter = document.querySelector('.counter');
+const counter2 = document.querySelector('.counter-2');
+const counter3 = document.querySelector('.counter-3');
 const allFloors = floorPath.children; //все этажи
 
 // Переменные
@@ -38,6 +40,7 @@ function showFloor() {
 			showDownBtn();
 			currentFloor = targetFloor.getAttribute('data-floor');
 			counter.innerText = `${currentFloor}`;
+			counter2.innerText = `${currentFloor}`;
 			countValue = +counter.textContent;
 		}
 
@@ -75,10 +78,12 @@ function nextFloor(){
 
 		if (countValue <= 9){
 			counter.innerText = `0${countValue}`
+			counter2.innerText = `0${countValue}`
 		}
 
 		if (countValue > 9){
 			counter.innerText = `${countValue}`
+			counter2.innerText = `${countValue}`
 		}
 
 		if (countValue > 17){
@@ -97,10 +102,12 @@ function prevFloor(){
 
 		if (countValue <= 9){
 			counter.innerText = `0${countValue}`
+			counter2.innerText = `0${countValue}`
 		}
 
 		if (countValue > 9){
 			counter.innerText = `${countValue}`
+			counter2.innerText = `${countValue}`
 		}
 
 		if (countValue < 3){
@@ -137,3 +144,45 @@ function showUpBtn(){
 	}
 }
 
+//Popup
+
+let popupButton = document.querySelector('.button-primary'),
+		closeButton = document.querySelector('.close'),
+		popup = document.querySelector('.popup'),
+		popupOverlay = document.querySelector('.popup-overlay');
+
+
+
+popupButton.onclick = function openPopup(){
+	popup.classList.remove('hidden');
+	popupOverlay.classList.remove('hidden');
+	keyPress();
+}
+
+function closePopup(){
+	popup.classList.add('hidden');
+	popupOverlay.classList.add('hidden');
+}
+
+closeButton.onclick = ()=>{
+	closePopup();
+}
+
+popupOverlay.onclick = ()=>{
+	closePopup();
+}
+
+function keyPress(){
+	document.onkeydown = function(evt) {
+		evt = evt || window.event;
+		let isEscape = false;
+		if ("key" in evt) {
+			isEscape = (evt.key === "Escape" || evt.key === "Esc");
+		} else {
+			isEscape = (evt.keyCode === 27);
+		}
+		if (isEscape) {
+			closePopup();
+		}
+	};
+}
